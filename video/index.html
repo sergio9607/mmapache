@@ -4,15 +4,17 @@
 		<title>Video | Mmapache</title>
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" href="../source/lib/mdl-red-indigo.css">
+		<link rel="stylesheet" href="../source/lib/mdl-red-blue.css">
 		<script defer src="../source/lib/mdl.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 	</head>
 	<body bgcolor="0a0a0a">
 		<style>
+			.mdl-card {height: 300px;}
+			.ff8bg {background: url('../source/content/movies/ff8.jpg') center / cover;}
 		</style>
-		<div class="start mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 			<header class="mdl-layout__header">
 				<div class="mdl-layout__header-row">
 					<div class="mdl-layout-spacer"></div>
@@ -39,6 +41,16 @@
 			<main class="mdl-layout__content">
 				<div class="mdl-grid">
 					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
+						<div class="mdl-card__title mdl-card--expand ff8bg"></div>
+						<div class="mdl-card__actions">
+							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="play/ff8">Ver</a>
+							<button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+								<i class="material-icons">bookmark_border</i>
+							</button>
+							<button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+								<i class="material-icons">favorite_border</i>
+							</button>
+						</div>
 					</div>
 					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
 					</div>
