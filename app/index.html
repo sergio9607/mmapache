@@ -2,14 +2,16 @@
 <html>
 	<head>
 		<title>Mmapache</title>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+		<link rel="shortcut icon" type="image/png" href="source/content/images/favicon.png">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" href="source/lib/mdl-bgrey-blue.css">
-		<script defer src="source/lib/mdl.js"></script>
+		<link rel="stylesheet" href="source/mdl/mdl-home.css">
+		<script defer src="source/mdl/mdl.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 		<style>
-			.start {background: url('source/content/images/bg-start.jpg') center / cover;}
+			.home {background: url('source/content/images/bg-home.jpg') center / cover;}
+			.draweri {margin-right: 32px;}
 			.mdl-card {height: 300px;}
 			.musiccard {background: url('source/content/images/bg-music.jpg') center / cover;}
 			.videocard {
@@ -17,64 +19,70 @@
 				background: url('source/content/images/bg-video.jpg') center / cover;
 			}
 			.tvcard {background: url('source/content/images/bg-tv.jpg') center / cover;}
+			.legalcard {
+				color: white;
+				min-height: 10px;
+			}
 		</style>
 	</head>
-	<body>
-		<div class="start mdl-layout mdl-js-layout mdl-layout--fixed-header">
-			<header class="mdl-layout__header mdl-layout__header--transparent">
-				<div class="mdl-layout__header-row">
-					<div class="mdl-layout-spacer"></div>
-					<span class="mdl-layout-title">Mmapache</span>
-					<div class="mdl-layout-spacer"></div>
-					<button id="more" class="mdl-button mdl-js-button mdl-button--icon">
-						<i class="material-icons">more_vert</i>
-					</button>
-					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" data-mdl-for="more">
-						<li class="mdl-menu__item">Cuenta</li>
-						<li class="mdl-menu__item">Ayuda</li>
-						<li class="mdl-menu__item">Salir</li>
-					</ul>
-				</div>
-			</header>
-			<div class="mdl-layout__drawer">
+	<body class="home mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header mdl-layout__header--transparent">
+			<div class="mdl-layout__header-row">
+				<div class="mdl-layout-spacer"></div>
 				<span class="mdl-layout-title">Mmapache</span>
-				<nav class="mdl-navigation">
-					<a class="mdl-navigation__link" href="music">Música</a>
-					<a class="mdl-navigation__link" href="video">Video</a>
-					<a class="mdl-navigation__link" href="tv">Televisión</a>
-				</nav>
+				<div class="mdl-layout-spacer"></div>
+				<button id="more" class="mdl-button mdl-js-button mdl-button--icon">
+					<i class="material-icons">more_vert</i>
+				</button>
+				<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" data-mdl-for="more">
+					<li class="mdl-menu__item">Cuenta</li>
+					<li class="mdl-menu__item">Ayuda</li>
+					<li class="mdl-menu__item">Salir</li>
+				</ul>
 			</div>
-			<main class="mdl-layout__content">
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
-					<div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
-						<div class="mdl-card__title mdl-card--expand musiccard"><h2 class="mdl-card__title-text">Música</h2></div>
-						<div class="mdl-card__supporting-text">Elige la mejor música para cada momento.</div>
-						<div class="mdl-card__actions mdl-card--border">
-							<a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="music">Escuchar</a>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
-					<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
-					<div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
-						<div class="mdl-card__title mdl-card--expand videocard"><h2 class="mdl-card__title-text">Video</h2></div>
-						<div class="mdl-card__supporting-text">Disfruta el contenido con tu propia programación.</div>
-						<div class="mdl-card__actions mdl-card--border">
-							<a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="video">Ver</a>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
-					<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
-					<div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
-						<div class="mdl-card__title mdl-card--expand tvcard"><h2 class="mdl-card__title-text">Televisión</h2></div>
-						<div class="mdl-card__supporting-text">Conéctate con tus canales favoritos.</div>
-						<div class="mdl-card__actions mdl-card--border">
-							<a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="tv">Sintonizar</a>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
-				</div>
-			</main>
+		</header>
+		<div class="mdl-layout__drawer">
+			<span class="mdl-layout-title">Mmapache</span>
+			<nav class="mdl-navigation">
+				<a class="mdl-navigation__link" href="music/"><i class="material-icons draweri">music_note</i>Música</a>
+				<a class="mdl-navigation__link" href="video/"><i class="material-icons draweri">movie</i>Video</a>
+				<a class="mdl-navigation__link" href="tv/"><i class="material-icons draweri">live_tv</i>Televisión</a>
+			</nav>
 		</div>
+		<main class="mdl-layout__content">
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
+				<div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
+					<div class="mdl-card__title mdl-card--expand musiccard"><h2 class="mdl-card__title-text">Música</h2></div>
+					<div class="mdl-card__supporting-text">Elige la mejor música para cada momento.</div>
+					<div class="mdl-card__actions mdl-card--border">
+						<a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="music/">Escuchar</a>
+					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
+				<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
+				<div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
+					<div class="mdl-card__title mdl-card--expand videocard"><h2 class="mdl-card__title-text">Video</h2></div>
+					<div class="mdl-card__supporting-text">Disfruta el contenido con tu propia programación.</div>
+					<div class="mdl-card__actions mdl-card--border">
+						<a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="video/">Ver</a>
+					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
+				<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
+				<div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
+					<div class="mdl-card__title mdl-card--expand tvcard"><h2 class="mdl-card__title-text">Televisión</h2></div>
+					<div class="mdl-card__supporting-text">Conéctate con tus canales favoritos.</div>
+					<div class="mdl-card__actions mdl-card--border">
+						<a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="tv/">Sintonizar</a>
+					</div>
+				</div>
+				<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
+			</div>
+			<!--
+			AVISO LEGAL
+			Los derechos de propiedad intelectual de los contenidos multimedia en el sitio web son propiedad de sus respectivos autores. El desarrollo y uso de este sitio es sólo con fines de investigación.
+			-->
+		</main>
 	</body>
 </html>

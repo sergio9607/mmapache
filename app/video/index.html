@@ -2,80 +2,72 @@
 <html>
 	<head>
 		<title>Video | Mmapache</title>
-		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+		<link rel="shortcut icon" type="image/png" href="../source/content/images/favicon.png">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-		<link rel="stylesheet" href="../source/lib/mdl-red-blue.css">
-		<script defer src="../source/lib/mdl.js"></script>
+		<link rel="stylesheet" href="../source/mdl/mdl-video.css">
+		<script defer src="../source/mdl/mdl.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
-	</head>
-	<body bgcolor="0a0a0a">
 		<style>
+			.draweri {margin-right: 32px;}
 			.mdl-card {height: 300px;}
 			.ff8bg {background: url('../source/content/movies/ff8.jpg') center / cover;}
 		</style>
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-			<header class="mdl-layout__header">
-				<div class="mdl-layout__header-row">
-					<div class="mdl-layout-spacer"></div>
-					<span class="mdl-layout-title">Mmapache</span>
-					<div class="mdl-layout-spacer"></div>
-					<button id="more" class="mdl-button mdl-js-button mdl-button--icon">
-						<i class="material-icons">more_vert</i>
-					</button>
-					<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" data-mdl-for="more">
-						<li class="mdl-menu__item">Cuenta</li>
-						<li class="mdl-menu__item">Ayuda</li>
-						<li class="mdl-menu__item">Salir</li>
-					</ul>
-				</div>
-			</header>
-			<div class="mdl-layout__drawer">
+	</head>
+	<body class="mdl-layout mdl-js-layout mdl-layout--fixed-header" bgcolor="1e1e1e">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<div class="mdl-layout-spacer"></div>
 				<span class="mdl-layout-title">Mmapache</span>
+				<div class="mdl-layout-spacer"></div>
 				<nav class="mdl-navigation">
-					<a class="mdl-navigation__link" href="../music">Música</a>
-					<a class="mdl-navigation__link" href="../video">Video</a>
-					<a class="mdl-navigation__link" href="../tv">Televisión</a>
+					<a class="mdl-navigation__link" href="../">Inicio</a>
 				</nav>
+				<button id="more" class="mdl-button mdl-js-button mdl-button--icon">
+					<i class="material-icons">more_vert</i>
+				</button>
+				<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" data-mdl-for="more">
+					<li class="mdl-menu__item">Cuenta</li>
+					<li class="mdl-menu__item">Ayuda</li>
+					<li class="mdl-menu__item">Salir</li>
+				</ul>
 			</div>
-			<main class="mdl-layout__content">
-				<div class="mdl-grid">
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
-						<div class="mdl-card__title mdl-card--expand ff8bg"></div>
-						<div class="mdl-card__actions">
-							<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="play/ff8">Ver</a>
-							<button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-								<i class="material-icons">bookmark_border</i>
-							</button>
-							<button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect">
-								<i class="material-icons">favorite_border</i>
-							</button>
-						</div>
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
-					</div>
-					<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
+		</header>
+		<div class="mdl-layout__drawer">
+			<span class="mdl-layout-title">Mmapache</span>
+			<nav class="mdl-navigation">
+				<a class="mdl-navigation__link" href="../"><i class="material-icons draweri">home</i>Inicio</a>
+				<a class="mdl-navigation__link" href="../music/"><i class="material-icons draweri">music_note</i>Música</a>
+				<a class="mdl-navigation__link" href="../video/"><i class="material-icons draweri">movie</i>Video</a>
+				<a class="mdl-navigation__link" href="../tv/"><i class="material-icons draweri">live_tv</i>Televisión</a>
+			</nav>
+		</div>
+		<main class="mdl-layout__content">
+			<div class="mdl-grid">
+				<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
+					<div class="mdl-card__title mdl-card--expand ff8bg"></div>
+					<div class="mdl-card__actions">
+						<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="play/movie/">Ver</a>
+						<button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+							<i class="material-icons">bookmark_border</i>
+						</button>
+						<button class="mdl-button mdl-button--icon mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+							<i class="material-icons">favorite_border</i>
+						</button>
 					</div>
 				</div>
-			</main>
-		</div>
+				<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
+				</div>
+				<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
+				</div>
+				<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
+				</div>
+				<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
+				</div>
+				<div class="mdl-cell mdl-cell--2-col mdl-card mdl-shadow--4dp">
+				</div>
+			</div>
+		</main>
 	</body>
 </html>
