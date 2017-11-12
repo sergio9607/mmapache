@@ -1,8 +1,16 @@
 ﻿-- =============================================================================
 -- Diagram Name: mmapache
--- Created on: Mar 4 12:17:41 AM
+-- Created on: Mar 4 12:01:20 AM
 -- Diagram Version: 
 -- =============================================================================
+DROP DATABASE IF EXISTS mapache;
+
+CREATE DATABASE IF NOT EXISTS mapache 
+CHARACTER SET utf8 
+COLLATE utf8_general_ci;
+
+USE mapache;
+
 SET FOREIGN_KEY_CHECKS=0;
 
 -- Drop table film
@@ -19,7 +27,8 @@ CREATE TABLE film (
   PRIMARY KEY(flm_id)
 )
 ENGINE=INNODB
-CHARACTER SET utf8 ;
+CHARACTER SET utf8 
+COLLATE utf8_general_ci ;
 
 -- Drop table artist
 DROP TABLE IF EXISTS artist;
@@ -31,12 +40,13 @@ CREATE TABLE artist (
   PRIMARY KEY(art_id)
 )
 ENGINE=INNODB
-CHARACTER SET utf8 ;
+CHARACTER SET utf8 
+COLLATE utf8_general_ci ;
 
--- Drop table user
-DROP TABLE IF EXISTS user;
+-- Drop table mapacheuser
+DROP TABLE IF EXISTS mapacheuser;
 
-CREATE TABLE user (
+CREATE TABLE mapacheuser (
   usr_username varchar(20) NOT NULL,
   usr_email varchar(50) NOT NULL,
   usr_password varchar(20) NOT NULL,
@@ -45,7 +55,8 @@ CREATE TABLE user (
   PRIMARY KEY(usr_username)
 )
 ENGINE=INNODB
-CHARACTER SET utf8 ;
+CHARACTER SET utf8 
+COLLATE utf8_general_ci ;
 
 -- Drop table album
 DROP TABLE IF EXISTS album;
@@ -63,7 +74,8 @@ CREATE TABLE album (
     ON UPDATE CASCADE
 )
 ENGINE=INNODB
-CHARACTER SET utf8 ;
+CHARACTER SET utf8 
+COLLATE utf8_general_ci ;
 
 -- Drop table song
 DROP TABLE IF EXISTS song;
@@ -82,7 +94,8 @@ CREATE TABLE song (
     ON UPDATE CASCADE
 )
 ENGINE=INNODB
-CHARACTER SET utf8 ;
+CHARACTER SET utf8 
+COLLATE utf8_general_ci ;
 
 -- Drop table card
 DROP TABLE IF EXISTS card;
@@ -95,12 +108,13 @@ CREATE TABLE card (
   crd_usr_username varchar(20) NOT NULL,
   PRIMARY KEY(crd_number),
   CONSTRAINT usr_cards FOREIGN KEY (crd_usr_username)
-    REFERENCES user(usr_username)
+    REFERENCES mapacheuser(usr_username)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 )
 ENGINE=INNODB
-CHARACTER SET utf8 ;
+CHARACTER SET utf8 
+COLLATE utf8_general_ci ;
 
 -- Drop table plan
 DROP TABLE IF EXISTS plan;
@@ -114,7 +128,7 @@ CREATE TABLE plan (
   pln_crd_number char(16) NOT NULL,
   PRIMARY KEY(pln_id),
   CONSTRAINT usr_plan FOREIGN KEY (pln_usr_username)
-    REFERENCES user(usr_username)
+    REFERENCES mapacheuser(usr_username)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT crd_plan FOREIGN KEY (pln_crd_number)
@@ -123,7 +137,8 @@ CREATE TABLE plan (
     ON UPDATE CASCADE
 )
 ENGINE=INNODB
-CHARACTER SET utf8 ;
+CHARACTER SET utf8 
+COLLATE utf8_general_ci ;
 
 -- Drop table watchlist
 DROP TABLE IF EXISTS watchlist;
@@ -139,12 +154,13 @@ CREATE TABLE watchlist (
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT usr_watchlist FOREIGN KEY (wat_usr_username)
-    REFERENCES user(usr_username)
+    REFERENCES mapacheuser(usr_username)
     ON DELETE CASCADE
     ON UPDATE CASCADE
 )
 ENGINE=INNODB
-CHARACTER SET utf8 ;
+CHARACTER SET utf8 
+COLLATE utf8_general_ci ;
 
 -- Drop table library
 DROP TABLE IF EXISTS library;
@@ -156,7 +172,7 @@ CREATE TABLE library (
   lib_loved tinyint(1) UNSIGNED NOT NULL DEFAULT '0',
   PRIMARY KEY(lib_usr_username, lib_sng_id),
   CONSTRAINT usr_library FOREIGN KEY (lib_usr_username)
-    REFERENCES user(usr_username)
+    REFERENCES mapacheuser(usr_username)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
   CONSTRAINT sng_library FOREIGN KEY (lib_sng_id)
@@ -165,6 +181,7 @@ CREATE TABLE library (
     ON UPDATE CASCADE
 )
 ENGINE=INNODB
-CHARACTER SET utf8 ;
+CHARACTER SET utf8 
+COLLATE utf8_general_ci ;
 
 SET FOREIGN_KEY_CHECKS=1;
