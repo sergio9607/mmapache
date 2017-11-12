@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<DBMODEL Version="2" TYPE="MySQL">
+<MODELSETTINGS MDDVERSION="2.1.7 (build 1051)" ModelProject="mmapache" ModelName="mmapache" ModelCompany="" ModelAuthor="Edgar Porras" ModelVersion="" ModelVersionAI="0" ModelCreated="2017-10-11 22:29:05" MaintainModelUpdated="1" ModelCopyright="\00A9" ModelUpdated="2015-03-04 00:18:09" Description="" Annotation="" ZoomFac="100.00" XPos="0" YPos="0" PrintLink="" WorkspaceColor="16777215" SnapGrid="1" DisplaySnap="1" SnapSize="10" ShowPages="0" ShowObjectsIcons="1" ShowTableColumns="1" ShowTableIndeces="1" ShowColumnTypes="1" ShowDomains="0" ShowIndexInd="0" ShowNullInd="1" ShowForeignKeys="1" EntityFillColor="16777215" EntityLineColor="8388608" EntityFontColor="0" ShowTableColumnComment="1" ShowTableTriggers="1" ShowTableComment="0" ShowMaxEnumItems="3" ShowRefName="1" ShowCardinality="0" ShowJoin="0" Notation="0" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" DefaultDelete="1" DefaultUpdate="1" DefaultTableType="4" DefaultDataType="14" CreateFKRef="0" FKPrefix="" QueryDelimiter=";" DBQuoteCharacter="\a" EncloseNames="0" HPageCount="5" VPageCount="5" SPFillColor="13499135" SPLineColor="8388608" SPFontColor="0" ViewFillColor="3329434" ViewLineColor="8388608" ViewFontColor="0" ShowViewAttributes="1" ShowViewTargets="1" ShowViewComment="0" TrimSPBody="0" MinimapBackColor="16777215" MinimapShapesStyle="2" MinimapVisibleAreaStyle="2" />
+<GENERATIONSETTINGS TextCharCase="2" NameInComment="0" ModelCheck="1" ISQL="0" Delimiter="||" TypeInsteadOfEngine="0">
+  <DBGENSETTINGS DBCreate="0" BeginScript="0" Comment="0" Drop="0" EndScript="0" />
+  <FKGENSETTINGS CreateFK="1" GenerateInsideTables="1" />
+  <SPGENSETTINGS BeginScript="0" Comment="0" Drop="1" EndScript="1" SPCreate="1" OrderStr="" />
+  <TABLEGENSETTINGS Annotation="0" BeginScript="0" Comment="1" CreateIndex="1" CreateOption="1" CreatePK="1" Drop="1" EndScript="0" TableCreate="1" TriggersCreate="1" TriggersDrop="0" PartitionsCreate="1" ColumnCharset="1" OrderStr="album,artist,card,film,library,plan,song,user,watchlist" />
+  <VIEWGENSETTINGS BeginScript="0" Comment="0" Drop="1" EndScript="0" ViewCreate="1" />
+  <EVENTGENSETTINGS BeginScript="0" Comment="0" Drop="1" EndScript="0" EventCreate="1" OrderStr="" />
+</GENERATIONSETTINGS>
+<DATABASE Name="mmapache_app" CharacterSet="utf8" Collate="utf8_general_ci" Comments="" Description="" Annotation="" BeginScript="" EndScript="" Generate="0" />
+<DOMAINS>
+</DOMAINS>
+<METADATA>
+<GROUPS>
+</GROUPS>
+<STAMPS>
+</STAMPS>
+<ENTITIES>
+<ENTITY ID="1000" Name="user" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="340" YPos="280" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="utf8" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1004" Name="usr_username" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="20" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1069" Name="usr_email" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1008" Name="usr_password" DomainID="-1" Pos="3" Datatype="14" Type="VARCHAR" Width="20" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1470" Name="usr_type" DomainID="-1" Pos="4" Datatype="14" Type="VARCHAR" Width="5" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1280" Name="usr_phone" DomainID="-1" Pos="5" Datatype="14" Type="VARCHAR" Width="20" Prec="0" NotNull="0" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1149" />
+<REFERENCE_BEGIN ID="1246" />
+<REFERENCE_BEGIN ID="1415" />
+<REFERENCE_BEGIN ID="1457" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1006" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1004=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1001" Name="song" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="10" YPos="170" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="utf8" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1122" Name="sng_id" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1025" Name="sng_mp3" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="200" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1016" Name="sng_title" DomainID="-1" Pos="3" Datatype="14" Type="VARCHAR" Width="100" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1018" Name="sng_time" DomainID="-1" Pos="4" Datatype="11" Type="TIME" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1186" Name="sng_genre" DomainID="-1" Pos="5" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1133" Name="sng_alb_id" DomainID="-1" Pos="6" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1150" />
+</REFERENCES_BEGIN>
+<REFERENCES_END>
+<REFERENCE_END ID="1129" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1027" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1122=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1002" Name="film" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="660" YPos="30" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="utf8" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1216" Name="flm_id" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1045" Name="flm_mp4" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="200" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1066" Name="flm_title" DomainID="-1" Pos="3" Datatype="14" Type="VARCHAR" Width="100" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1379" Name="flm_year" DomainID="-1" Pos="4" Datatype="12" Type="YEAR" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1197" Name="flm_genre" DomainID="-1" Pos="5" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1484" Name="flm_rating" DomainID="-1" Pos="6" Datatype="26" Type="NUMERIC" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1295" Name="flm_details" DomainID="-1" Pos="7" Datatype="14" Type="VARCHAR" Width="1000" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1245" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1047" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1216=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1028" Name="card" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="320" YPos="450" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="utf8" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1029" Name="crd_number" DomainID="-1" Pos="1" Datatype="13" Type="CHAR" Width="16" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1318" Name="crd_cvv" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="4" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1038" Name="crd_holder" DomainID="-1" Pos="3" Datatype="14" Type="VARCHAR" Width="100" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1450" Name="crd_issuer" DomainID="-1" Pos="4" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1461" Name="crd_usr_username" DomainID="-1" Pos="5" Datatype="14" Type="VARCHAR" Width="20" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1462" />
+</REFERENCES_BEGIN>
+<REFERENCES_END>
+<REFERENCE_END ID="1457" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1031" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1029=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1079" Name="artist" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="320" YPos="20" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="utf8" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1080" Name="art_id" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1084" Name="art_name" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="100" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1321" Name="art_cover" DomainID="-1" Pos="3" Datatype="14" Type="VARCHAR" Width="200" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1091" />
+</REFERENCES_BEGIN>
+<INDEXES>
+<INDEX ID="1082" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1080=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1086" Name="album" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="10" YPos="10" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="utf8" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1087" Name="alb_id" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1088" Name="alb_name" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="100" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1325" Name="alb_year" DomainID="-1" Pos="3" Datatype="12" Type="YEAR" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1306" Name="alb_cover" DomainID="-1" Pos="4" Datatype="14" Type="VARCHAR" Width="200" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1135" Name="alb_art_id" DomainID="-1" Pos="5" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_BEGIN>
+<REFERENCE_BEGIN ID="1129" />
+</REFERENCES_BEGIN>
+<REFERENCES_END>
+<REFERENCE_END ID="1091" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1090" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1087=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1146" Name="library" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="320" YPos="130" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="utf8" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1154" Name="lib_usr_username" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="20" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1156" Name="lib_sng_id" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1163" Name="lib_saved" DomainID="-1" Pos="3" Datatype="0" Type="TINYINT" Width="1" Prec="0" NotNull="1" Unsigned="1" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1180" Name="lib_loved" DomainID="-1" Pos="4" Datatype="0" Type="TINYINT" Width="1" Prec="0" NotNull="1" Unsigned="1" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="0" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
+<REFERENCE_END ID="1149" />
+<REFERENCE_END ID="1150" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1152" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1154=" />
+<INDEXCOLUMN ColumnID="1156=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1242" Name="watchlist" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="630" YPos="220" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="utf8" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1252" Name="wat_usr_username" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="20" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1250" Name="wat_flm_id" DomainID="-1" Pos="2" Datatype="14" Type="VARCHAR" Width="50" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1347" Name="wat_saved" DomainID="-1" Pos="3" Datatype="0" Type="TINYINT" Width="1" Prec="0" NotNull="1" Unsigned="1" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1366" Name="wat_loved" DomainID="-1" Pos="4" Datatype="0" Type="TINYINT" Width="1" Prec="0" NotNull="1" Unsigned="1" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
+<REFERENCE_END ID="1245" />
+<REFERENCE_END ID="1246" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1270" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1252=" />
+<INDEXCOLUMN ColumnID="1250=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+<ENTITY ID="1226" Name="plan" Comments="" LineColor="8388608" FillColor="16777215" FontColor="0" XPos="10" YPos="350" Type="4" RowFormat="0" Temporary="0" RowChecksum="0" PackKeys="0" DelayKeyTblUpdates="0" MinRowNumber="0" MaxRowNumber="0" CharacterSet="utf8" Collate="" Description="" Annotation="" BeginScript="" EndScript="" Generate="1" PartitioningType="0" PartitioningIsLinear="1" PartitionsNum="2" PartitioningExpression="" SubPartitioningType="0" SubPartitioningIsLinear="0" SubPartitionsNum="2" SubPartitioningExpression="" >
+<COLUMNS>
+<COLUMN ID="1399" Name="pln_id" DomainID="-1" Pos="1" Datatype="14" Type="VARCHAR" Width="24" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="1" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1434" Name="pln_date" DomainID="-1" Pos="2" Datatype="8" Type="DATE" Width="0" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1409" Name="pln_music" DomainID="-1" Pos="3" Datatype="0" Type="TINYINT" Width="1" Prec="0" NotNull="1" Unsigned="1" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1413" Name="pln_video" DomainID="-1" Pos="4" Datatype="0" Type="TINYINT" Width="1" Prec="0" NotNull="1" Unsigned="1" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="0" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1421" Name="pln_usr_username" DomainID="-1" Pos="5" Datatype="14" Type="VARCHAR" Width="20" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+<COLUMN ID="1466" Name="pln_crd_number" DomainID="-1" Pos="6" Datatype="13" Type="CHAR" Width="16" Prec="0" NotNull="1" Unsigned="0" ZeroFill="0" Binary="0" AutoInc="0" PrimaryKey="0" IsFKey="1" Values="" DefaultValue="" Comments="" TimestampOnUpdate="0" CharacterSet="" Collate="" >
+</COLUMN>
+</COLUMNS>
+<REFERENCES_END>
+<REFERENCE_END ID="1415" />
+<REFERENCE_END ID="1462" />
+</REFERENCES_END>
+<INDEXES>
+<INDEX ID="1403" Name="PRIMARY" Primary="1" Unique="0" FullText="0" Reference_ID="-1">
+<INDEXCOLUMNS>
+<INDEXCOLUMN ColumnID="1399=" />
+</INDEXCOLUMNS>
+</INDEX>
+</INDEXES>
+</ENTITY>
+</ENTITIES>
+<REFERENCES>
+<REFERENCE  ID="1091" Name="art_albums" Comments="" SOURCE="1079" DESTINATION="1086" FKIDS="1080=1135\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1082" AutoColumnIDs="1135\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1129" Name="alb_songs" Comments="" SOURCE="1086" DESTINATION="1001" FKIDS="1087=1133\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1090" AutoColumnIDs="1133\n" LabelPointNumber="2" LabelPosition="0.846153846153847" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1149" Name="usr_library" Comments="" SOURCE="1000" DESTINATION="1146" FKIDS="1004=1154\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1006" AutoColumnIDs="1154\n" LabelPointNumber="2" LabelPosition="0.815028901734105" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1150" Name="sng_library" Comments="" SOURCE="1001" DESTINATION="1146" FKIDS="1122=1156\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1027" AutoColumnIDs="1156\n" LabelPointNumber="2" LabelPosition="0.58576512455516" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1245" Name="flm_watchlist" Comments="" SOURCE="1002" DESTINATION="1242" FKIDS="1216=1250\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1047" AutoColumnIDs="1250\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1246" Name="usr_watchlist" Comments="" SOURCE="1000" DESTINATION="1242" FKIDS="1004=1252\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1006" AutoColumnIDs="1252\n" LabelPointNumber="2" LabelPosition="0.605857066093498" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1415" Name="usr_plan" Comments="" SOURCE="1000" DESTINATION="1226" FKIDS="1004=1421\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1006" AutoColumnIDs="1421\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1457" Name="usr_cards" Comments="" SOURCE="1000" DESTINATION="1028" FKIDS="1004=1461\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1006" AutoColumnIDs="1461\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+<REFERENCE  ID="1462" Name="crd_plan" Comments="" SOURCE="1028" DESTINATION="1226" FKIDS="1029=1466\n" RefColor="8388608" RefLabelColor="16777215" RefLabelFontColor="0" OnDelete="1" OnUpdate="1" Description="" Annotation="" Generate="1" FKIndex_ID="-1" ParentKeyIndexID="1031" AutoColumnIDs="1466\n" LabelPointNumber="2" LabelPosition="0.5" ManualStartTailPosition="0" ManualEndTailPosition="0" ><USERPOINTS></USERPOINTS>
+</REFERENCE>
+</REFERENCES>
+<NOTES>
+</NOTES>
+<STOREDPROCES>
+</STOREDPROCES>
+<VIEWS>
+</VIEWS>
+<EVENTS>
+</EVENTS>
+</METADATA>
+</DBMODEL>
