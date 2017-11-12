@@ -1,6 +1,6 @@
 ﻿-- =============================================================================
 -- Diagram Name: mmapache
--- Created on: Mar 4 12:01:20 AM
+-- Created on: Mar 4 12:27:38 AM
 -- Diagram Version: 
 -- =============================================================================
 DROP DATABASE IF EXISTS mapache;
@@ -21,8 +21,9 @@ CREATE TABLE film (
   flm_mp4 varchar(200) NOT NULL,
   flm_title varchar(100) NOT NULL,
   flm_year year NOT NULL,
+  flm_cover varchar(200) NOT NULL,
   flm_genre varchar(50) NOT NULL,
-  flm_rating numeric NOT NULL,
+  flm_rating decimal(2,1) UNSIGNED NOT NULL,
   flm_details varchar(1000) NOT NULL,
   PRIMARY KEY(flm_id)
 )
