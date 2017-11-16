@@ -7,11 +7,12 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="../../../source/mdl/mdl-video.css">
 		<script defer src="../../../source/mdl/mdl.js"></script>
+		<script async src="https://platform.twitter.com/widgets.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 		<style>
-			.draweri {margin-right: 32px;}
-			.videocard {min-height: 20px;}
+			.mdl-navigation__link .material-icons {margin-right: 32px;}
+			.mdl-cell--10-col {min-height: 20px;}
 		</style>
 	</head>
 	<body class="mdl-layout mdl-js-layout mdl-layout--fixed-header" bgcolor="1e1e1e">
@@ -33,16 +34,16 @@
 		<div class="mdl-layout__drawer">
 			<span class="mdl-layout-title">Mmapache</span>
 			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link" href="../../../"><i class="material-icons draweri">home</i>Inicio</a>
-				<a class="mdl-navigation__link" href="../../../music/"><i class="material-icons draweri">music_note</i>Música</a>
-				<a class="mdl-navigation__link" href="../../../video/"><i class="material-icons draweri">movie</i>Video</a>
-				<a class="mdl-navigation__link" href="../../../tv/"><i class="material-icons draweri">live_tv</i>Televisión</a>
+				<a class="mdl-navigation__link" href="../../../"><i class="material-icons">home</i>Inicio</a>
+				<a class="mdl-navigation__link" href="../../../music/"><i class="material-icons">music_note</i>Música</a>
+				<a class="mdl-navigation__link" href="../../../video/"><i class="material-icons">movie</i>Video</a>
+				<a class="mdl-navigation__link" href="../../../tv/"><i class="material-icons">live_tv</i>Televisión</a>
 			</nav>
 		</div>
 		<main class="mdl-layout__content">
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
-				<div class="mdl-cell mdl-cell--10-col mdl-card mdl-shadow--4dp videocard">
+				<div class="mdl-cell mdl-cell--10-col mdl-card mdl-shadow--4dp">
 					<video controls width="100%"><source src="../../../source/content/movies/ff8-2017.mp4" type="video/mp4"></video>
 				</div>
 				<div class="mdl-cell mdl-cell--1-col-desktop mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
@@ -56,11 +57,9 @@
 						<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
 							<i class="material-icons">favorite_border</i>
 						</button>
-						<button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-							<i class="material-icons">feedback</i>
-						</button>
+						<a href="https://twitter.com/intent/tweet?screen_name=mmapachemedia&ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Tu comentario"></a>
 					</div>
-					<div class="mdl-card__supporting-text">Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción.</div>
+					<div class="mdl-card__supporting-text">Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción. Descripción.</div>
 					<div class="mdl-card__actions mdl-card--border">
 						<a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Botón</a>
 					</div>

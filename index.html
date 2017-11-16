@@ -10,22 +10,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta charset="utf-8">
 		<style>
-			.home {background: url('source/content/images/bg-home.jpg') center / cover;}
-			.draweri {margin-right: 32px;}
+			.mdl-layout {background: url('source/content/images/bg-home.jpg') center / cover;}
+			.mdl-navigation__link .material-icons {margin-right: 32px;}
 			.mdl-card {height: 300px;}
-			.musiccard {background: url('source/content/images/bg-music.jpg') center / cover;}
-			.videocard {
+			.bg-music {background: url('source/content/images/bg-music.jpg') center / cover;}
+			.bg-video {
 				color: white;
 				background: url('source/content/images/bg-video.jpg') center / cover;
 			}
-			.tvcard {background: url('source/content/images/bg-tv.jpg') center / cover;}
-			.legalcard {
-				color: white;
-				min-height: 10px;
-			}
+			.bg-tv {background: url('source/content/images/bg-tv.jpg') center / cover;}
 		</style>
 	</head>
-	<body class="home mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	<body class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 		<header class="mdl-layout__header mdl-layout__header--transparent">
 			<div class="mdl-layout__header-row">
 				<div class="mdl-layout-spacer"></div>
@@ -44,17 +40,17 @@
 		<div class="mdl-layout__drawer">
 			<span class="mdl-layout-title">Mmapache</span>
 			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link" href="music/"><i class="material-icons draweri">music_note</i>Música</a>
-				<a class="mdl-navigation__link" href="video/"><i class="material-icons draweri">movie</i>Video</a>
-				<a class="mdl-navigation__link" href="tv/"><i class="material-icons draweri">live_tv</i>Televisión</a>
+				<a class="mdl-navigation__link" href="music/"><i class="material-icons">music_note</i>Música</a>
+				<a class="mdl-navigation__link" href="video/"><i class="material-icons">movie</i>Video</a>
+				<a class="mdl-navigation__link" href="tv/"><i class="material-icons">live_tv</i>Televisión</a>
 			</nav>
 		</div>
 		<main class="mdl-layout__content">
 			<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
 				<div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
-					<div class="mdl-card__title mdl-card--expand musiccard"><h2 class="mdl-card__title-text">Música</h2></div>
-					<div class="mdl-card__supporting-text">Elige la mejor música para cada momento.</div>
+					<div class="mdl-card__title mdl-card--expand bg-music"><h2 class="mdl-card__title-text">Música</h2></div>
+					<div class="mdl-card__supporting-text">Elige la mejor canción para cada momento.</div>
 					<div class="mdl-card__actions mdl-card--border">
 						<a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="music/">Escuchar</a>
 					</div>
@@ -62,7 +58,7 @@
 				<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
 				<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
 				<div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
-					<div class="mdl-card__title mdl-card--expand videocard"><h2 class="mdl-card__title-text">Video</h2></div>
+					<div class="mdl-card__title mdl-card--expand bg-video"><h2 class="mdl-card__title-text">Video</h2></div>
 					<div class="mdl-card__supporting-text">Disfruta el contenido con tu propia programación.</div>
 					<div class="mdl-card__actions mdl-card--border">
 						<a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="video/">Ver</a>
@@ -71,7 +67,7 @@
 				<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
 				<div class="mdl-cell mdl-cell--hide-desktop mdl-cell--2-col-tablet mdl-cell--hide-phone"></div>
 				<div class="mdl-cell mdl-cell--4-col mdl-card mdl-shadow--4dp">
-					<div class="mdl-card__title mdl-card--expand tvcard"><h2 class="mdl-card__title-text">Televisión</h2></div>
+					<div class="mdl-card__title mdl-card--expand bg-tv"><h2 class="mdl-card__title-text">Televisión</h2></div>
 					<div class="mdl-card__supporting-text">Conéctate con tus canales favoritos.</div>
 					<div class="mdl-card__actions mdl-card--border">
 						<a class="mdl-button mdl-button--accent mdl-js-button mdl-js-ripple-effect" href="tv/">Sintonizar</a>

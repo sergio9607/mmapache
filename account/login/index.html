@@ -1,25 +1,4 @@
-<?php
-	include("config.php");
-	session_start();
-	if($_server["request_method"]=="post") {
-		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		$u = mysqli_real_escape_string($db, $_post['user']);
-		$p = mysqli_real_escape_string($db, $_post['pass']);
-		//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-		$sql = "SELECT usr_username FROM mapacheuser WHERE usr_username='$u' AND usr_password='$p' AND usr_type='user'";
-		$result = mysqli_query($db, $sql);
-		$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-		$active = $row['active'];
-		$count = mysqli_num_rows($result);
-		if($count==1) {
-			session_register("user");
-			$_session['login_user'] = $u;
-			header("location: ../../");
-		} else {
-			$error = "Ingreso incorrecto";
-		}
-	}
-?>
+<!doctype html>
 <html>
 	<head>
 		<title>Ingreso | Mmapache</title>
